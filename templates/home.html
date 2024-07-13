@@ -9,20 +9,28 @@
 
 </head>
 <body>
+    {% include 'nav.html'%}
+    <img class="img-fluid" id="banner" src=https://b2fbe6e9-ab35-4b93-9b12-19de53219242-00-3iq3a037kmm1.sisko.replit.dev/static/banner.jpg>
     <div class="container">
     <h1 class="text-center mt-2 mb-4"> @llCareers</h1>
-    <img class="img-fluid" id="banner" src=https://b2fbe6e9-ab35-4b93-9b12-19de53219242-00-3iq3a037kmm1.sisko.replit.dev/static/banner.jpg>
+    
         <style>
             #banner {
                 width: 100%;
                 height: 360px;
                 object-fit: cover;
+                margin-bottom: 16px;
             }
         </style>
-    <h2 class="text-center mt-2 mb-4">About @llCareers</h2>
-    <p class="lead">Welcome to AllCareers! Your ultimate destination for finding the perfect job. At AllCareers, we believe that every individual deserves a fulfilling career that aligns with their passions and skills. Our platform is designed to connect job seekers with a diverse range of opportunities across various industries, ensuring that you can find the right fit for your professional journey. Whether you're just starting out, looking to advance in your career, or seeking a fresh start, AllCareers provides a seamless and user-friendly experience to help you navigate the job market. Explore a multitude of job listings, leverage our advanced search tools, and access valuable career resources to guide you every step of the way. Join us at AllCareers, where your dream job is just a click away!
+<div class='row' style="margin-bottom: 16px">
+    <div class='col-md-6'>
+        <p class="lead">Welcome to AllCareers! Your ultimate destination for finding the perfect job. At AllCareers, we believe that every individual deserves a fulfilling career that aligns with their passions and skills. Our platform is designed to connect job seekers with a diverse range of opportunities across various industries, ensuring that you can find the right fit for your professional journey. Whether you're just starting out, looking to advance in your career, or seeking a fresh start, AllCareers provides a seamless and user-friendly experience to help you navigate the job market. Explore a multitude of job listings, leverage our advanced search tools, and access valuable career resources to guide you every step of the way. Join us at AllCareers, where your dream job is just a click away!
 
 Feel free to adjust the wording or details to better suit your specific vision for AllCareers!</p>
+    </div>
+    <div class='d-none d-md-block col-md-6'>
+    <img src='/static/people.jpg' style="height:320px; border-radius:4px;">
+</div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <div>
         {% for job in jobs %}
@@ -30,8 +38,8 @@ Feel free to adjust the wording or details to better suit your specific vision f
         {% endfor %}
     </div>
         <div style="text-align:center;">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Copyright 2024, @llCareers</p>
+    <a href="mailto:hello@allcareers.ai?subject=Question%20about%20job%20openings&body=My%20name%3A%0D%0AMy%20Questions%3A"class="btn btn-primary btn-lg">Contact Us</a>
     </div>
+        {% include 'footer.html'%}
 </body>
 </html>
